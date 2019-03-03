@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>WYSIWYG - EDITOR</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: linear-gradient(to bottom right, lightgreen, #999);
+            background-position: center;
+            background-origin: unset;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            width: 650px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            padding: 20px 0;
+            color: dimgray;
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #save {
+            background-color: #fff;
+            padding: 10px 20px;
+            border: 1px solid #999;
+            font-size: 2em;
+        }
+
+    </style>
+    <link rel="stylesheet" href="editor.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>WYSIWYG - EDITOR</h1>
+        <textarea name="editor" id="editor" cols="30" rows="10">asdfasdfsdfasdf asdfasdf asdfasdfasd</textarea>
+    </div>
+
+    <div class="actions">
+        <button onclick="editor.save();" id="save">Salvar</button>
+    </div>
+
+    <script src="editor.js"></script>
+
+    <script>
+        var editor = new CDEditor('#editor');
+    </script>
+</body>
+
+</html>
